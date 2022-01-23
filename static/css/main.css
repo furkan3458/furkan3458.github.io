@@ -63,6 +63,30 @@ body {
     width: 100%;
 }
 
+.card-text.collapse:not(.show) {
+    display: -webkit-box!important;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    height: 6.3rem;
+    overflow: hidden;
+}
+
+.card-text.collapsing {
+    height: 6.3rem;
+}
+
+.card-text.collapse.show {
+    display: block!important;
+}
+
+.card-body a[data-bs-toggle="collapse"].collapsed::after {
+    content: '...devamını oku';
+}
+
+.card-body a[data-bs-toggle="collapse"]:not(.collapsed)::after {
+    content: '...daha az';
+}
+
 
 /*SIDEBAR*/
 
